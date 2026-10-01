@@ -1,0 +1,17 @@
+{
+  "name": "tech-stack",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "license": "GPL-3.0",
+  "description": "Detect the technologies behind any website (CMS, analytics, frameworks, ecommerce, hosting, email) using open-source fingerprints.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js"
+  },
+  "dependencies": {
+    "apify": "^3.4.0",
+    "cheerio": "^1.0.0",
+    "playwright": "*"
+  }
+}

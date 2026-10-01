@@ -1,0 +1,7 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Tech stack output",
+  "properties": {
+    "results": { "type": "string", "title": "Websites", "description": "One row per website with its technologies.", "template": "{{links.apiDefaultDatasetUrl}}/items" }
+  }
+}

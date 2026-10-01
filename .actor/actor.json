@@ -1,0 +1,16 @@
+{
+  "actorSpecification": 1,
+  "name": "tech-stack",
+  "title": "Website Tech Stack Detector: CMS, Analytics, Ecommerce",
+  "description": "Find out what any website is built with: CMS, ecommerce, analytics, frameworks, CDN, hosting and email provider. 7,600+ technologies. Fast mode, or Deep scan in a real browser for maximum accuracy. Bulk lists, clean JSON.",
+  "version": "1.1",
+  "buildTag": "latest",
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "dockerfile": "../Dockerfile",
+  "readme": "../README.md",
+  "defaultMemoryMbytes": 2048,
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  }
+}

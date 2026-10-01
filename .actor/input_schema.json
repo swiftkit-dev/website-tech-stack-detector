@@ -1,0 +1,53 @@
+{
+  "title": "Website Tech Stack Detector",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "websites": {
+      "title": "Websites",
+      "type": "array",
+      "description": "One per line. A domain (stripe.com) or a full URL (https://www.notion.so/pricing).",
+      "editor": "stringList",
+      "prefill": [
+        "stripe.com",
+        "https://www.shopify.com",
+        "wordpress.org"
+      ]
+    },
+    "deepScan": {
+      "title": "Deep scan (real browser)",
+      "type": "boolean",
+      "description": "Open each site in headless Chrome and also detect tools that load with JavaScript (analytics, chat widgets, A/B testing, frameworks). Finds many more technologies; slower and priced higher. Off = fast scan of the page source.",
+      "default": false
+    },
+    "includeDetails": {
+      "title": "Include details per technology",
+      "type": "boolean",
+      "description": "Adds version, confidence, categories, website and whether it's open source or SaaS for each technology.",
+      "default": true
+    },
+    "checkDns": {
+      "title": "Check DNS and SSL",
+      "type": "boolean",
+      "description": "Also look at public DNS records (email provider, DNS host, verification records) and the SSL issuer. Finds more technologies.",
+      "default": true
+    },
+    "respectRobotsTxt": {
+      "title": "Respect robots.txt",
+      "type": "boolean",
+      "description": "Skip sites whose robots.txt asks all bots to stay away. Skipped sites are free.",
+      "default": true
+    },
+    "maxConcurrency": {
+      "title": "Websites checked at once",
+      "type": "integer",
+      "description": "How many websites to scan in parallel.",
+      "minimum": 1,
+      "maximum": 20,
+      "default": 10
+    }
+  },
+  "required": [
+    "websites"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "actorSpecification": 1,
+  "fields": {},
+  "views": {
+    "overview": {
+      "title": "Websites",
+      "transformation": { "fields": ["domain", "status", "technologyCount", "technologies", "emailProvider", "pageTitle", "finalUrl"] },
+      "display": {
+        "component": "table",
+        "properties": {
+          "domain": { "label": "Domain" }, "status": { "label": "Status" },
+          "technologyCount": { "label": "# Tech", "format": "number" }, "technologies": { "label": "Technologies", "format": "array" },
+          "emailProvider": { "label": "Email" }, "pageTitle": { "label": "Title" }, "finalUrl": { "label": "URL", "format": "link" }
+        }
+      }
+    }
+  }
+}
